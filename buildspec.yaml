@@ -11,7 +11,7 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - aws s3 cp . s3://my-static-bucket-aws-cicd --recursive --include "*.html" --include "*.css" --exclude "*"
+      - aws s3 cp . s3://bucket-name --recursive --include "*.html" --include "*.css" --exclude "*"
   post_build:
     commands:
       - echo Website deployed on S3
